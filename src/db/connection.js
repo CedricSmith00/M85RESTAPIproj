@@ -1,4 +1,7 @@
-const connection = new Sequelize(process.env.MYSLQ_URI);
+require("dotenv").config();
+const { Sequelize } = require("sequelize");
+
+const connection = new Sequelize(process.env.MYSQL_URI);
 
 try {
     connection.authenticate();
